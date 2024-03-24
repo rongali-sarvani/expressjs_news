@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Your Website - Admin</title>
+</head>
+
+<body class="t4">
+
+    <nav class="nav4">
+        <ul>
+            <li ><a href="/" class="navtext4">Home</a></li>
+            <li><a href="/news" class="navtext4">News</a></li>
+            <% if (user) { %>
+                <li><a href="/logout" class="navtext4">Logout</a></li>
+            <% } %>
+        </ul>
+    </nav>
+
+    <section id="admin" class="adminsection">
+        <h2 class="text">Admin Panel</h2>
+        <p class="text">Welcome, admin! You can add, delete, and update news here.</p>
+        <br><hr>
+
+        <!-- Form to add news -->
+        <form action="/admin/add-news" method="post" enctype="multipart/form-data">
+            <label for="newsTitle">News Title:</label>
+            <input type="text" id="newsTitle" name="newsTitle" class="bor" required>
+
+            <label for="newsContent">News Content:</label>
+            <textarea id="newsContent" name="newsContent" rows="4" class="bor" required></textarea>
+
+            <label for="newsImage">News Image:</label>
+            <input type="file" id="newsImage" name="newsImage" accept="image/*" >
+
+            <button type="submit" class="sub">Add News</button>
+        </form>
+       
+    </section>
+       <section class="adminsection1">
+        <h3 class="exi">Existing News</h3><br><hr><br>
+        <ul>
+            <% for (let i = 0; i < newsList.length; i++) { %>
+                <li>
+                    <strong><%= newsList[i].title %></strong> - <%= newsList[i].content %>
+
+                    <% if (newsList[i].imageUrl) { %>
+                        <img src="<%= newsList[i].imageUrl %>" alt="News Image" class="news-image">
+                    <% } %>
+
+                    <!-- Form to delete news -->
+                    <form action="/admin/delete-news/<%= newsList[i].id %>" method="POST" style="display:inline;">
+                        <button type="submit" class="sub">Delete</button>
+                    </form>
+
+                    <!-- Form to update news -->
+                    <form action="/admin/update-news" method="post" style="display:inline;">
+                        <input type="hidden" name="newsId" value="<%= newsList[i].id %>">
+                        <label for="updatedTitle">Update Title:</label>
+                        <input type="text" id="updatedTitle" name="updatedTitle" required value="<%= newsList[i].title %>">
+                        <label for="updatedContent">Update Content:</label>
+                        <textarea id="updatedContent" name="updatedContent" rows="2" required><%= newsList[i].content %></textarea>
+                        <button type="submit" class="sub">Update</button>
+                        
+                    </form>
+                    <br><br>
+                    <hr>
+                </li>
+            <% } %>
+        </ul>
+    </section>
+
+</body>
+
+</html>

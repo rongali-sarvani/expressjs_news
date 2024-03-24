@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Your Website - Login</title>
+</head>
+
+<body class="t3">
+
+    <!-- Navigation Bar -->
+    <nav class="nav3">
+        <ul>
+            <li><a href="/"  class="navtext3">Home</a></li>
+            <li><a href="/news"  class="navtext3">News</a></li>
+            <% if (user) { %>
+                <li><a href="/logout"  class="navtext3">Logout</a></li>
+            <% } else { %>
+                <li><a href="/login"  class="navtext3">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+
+
+    <section id="login" class="loginsection">
+        <% if (user) { %>
+            <h2>Welcome, <%= user %></h2>
+            <p>You are currently logged in. <a href="/logout">Logout</a></p>
+        <% } else { %>
+            <h2 align="center" class="loginheading">Login</h2>
+            <hr>
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="bor" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="bor" required>
+
+                <button type="submit">Login</button>
+            </form>
+        <% } %>
+       
+    </section>
+
+    
+</body>
+
+</html>

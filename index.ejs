@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Your Website - Home</title>
+    <style>
+        /* Add your custom styles here */
+        .latest-news {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            display: flex; /* Use flexbox layout */
+        }
+
+        .latest-news h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .news-list {
+            flex: 0.5; /* Occupy remaining space */
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 300px; /* Set maximum width for news items */
+        }
+
+        .news-item img {
+            max-width: 100px; /* Set maximum width for images */
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .news-item h3 {
+            font-size: 16px; /* Decrease font size for title */
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .news-content p {
+            display: none; /* Hide content text */
+        }
+
+        .side-content {
+            flex: 1; /* Occupy remaining space */
+            margin-left: 10px; /* Add spacing between latest news and side content */
+            max-width: 70%;
+        }
+
+        .side-content img {
+            max-width: 100%; /* Make image responsive */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            margin-right: 100px;
+            height:60%
+            
+        }
+
+        .side-content p {
+            font-size: 14px; /* Set font size for side content text */
+            color: #666;
+            text-align:left;
+        }
+        .search
+        {
+            margin-left:10px;
+        }
+    </style>
+</head>
+
+<body class="t1">
+
+    <nav class="nav1">
+        <ul>
+            <li><a href="/" class="navtext1">Home</a></li>
+            <li><a href="/news" class="navtext1">News</a></li>
+            <li><a href="/login" class="navtext1">Login</a></li>
+            <li>
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search news..." class="search">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="home">
+        <div class="latest-news">
+            <div class="news-list">
+                <h2>Latest News</h2>
+                <ul>
+                    <% newsList.forEach(news => { %>
+                    <li class="news-item">
+                        <!-- Link to the individual news article page -->
+                        <a href="/news/<%= news.id %>">
+                            <% if (news.imageUrl) { %>
+                            <img src="<%= news.imageUrl %>" alt="News Image">
+                            <% } %>
+                            <div class="news-content">
+                                <h3><%= news.title %></h3>
+                                <p><%= news.content %></p>
+                            </div>
+                        </a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </div>
+            <div class="side-content">
+                <!-- Placeholder image and text -->
+                <img src="/images/anits.jpg" alt="Placeholder Image">
+                <p>Anil Neerukonda Institute of Technology and Sciences (ANITS) is a renowned engineering college located in Visakhapatnam, Andhra Pradesh, India. It was established in the year 2001 and is named after the famous industrialist and philanthropist, Late Sri Anil Neerukonda. ANITS is affiliated with Andhra University and is approved by the All India Council for Technical Education (AICTE), New Delhi.
+
+                    The college offers undergraduate and postgraduate programs in various disciplines of engineering, including Computer Science, Electronics and Communication, Mechanical, Civil, and Electrical Engineering. ANITS is known for its excellent academic standards, state-of-the-art infrastructure, and experienced faculty members. The college also emphasizes research and innovation, encouraging students to participate in various projects and competitions.
+                    
+                    ANITS has a vibrant campus life with numerous extracurricular activities, clubs, and events that help in the overall development of students. The college has a strong placement record, with many students securing placements in reputed companies every year. ANITS is considered one of the top engineering colleges in Andhra Pradesh and is a preferred choice for students seeking quality technical education.
+                    
+                    
+                    
+                    
+                    
+                    </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

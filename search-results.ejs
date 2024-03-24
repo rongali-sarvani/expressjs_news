@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .search-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .news-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .news-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .news-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+           
+        }
+
+        .no-results {
+            color: #666;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Additional styles for news links */
+        .news-link {
+            text-decoration: none;
+            color: inherit; /* Inherit color from parent */
+            cursor: pointer;
+        }
+
+        .news-link:hover {
+            text-decoration: underline;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="nav1">
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="/" class="navtext1">Home</a></li>
+            <li><a href="/news" class="navtext1">News</a></li>
+            <li><a href="/login" class="navtext1">Login</a></li>
+            <li>
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search news...">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search results heading -->
+    <h2>Search Results for "<%= searchQuery %>"</h2>
+
+    <!-- Display search results -->
+    <div class="search-results">
+        <% if (searchResults.length > 0) { %>
+            <% searchResults.forEach(news => { %>
+                <!-- Link to individual news article page -->
+                <a href="/news/<%= news.id %>" class="news-link">
+                    <div class="news-item">
+                        
+                        <h3><%= news.title %></h3>
+                        <% if (news.imageUrl) { %>
+                            <img src="<%= news.imageUrl %>" alt="News Image">
+                        <% } %>
+                    </div>
+                </a>
+            <% }); %>
+        <% } else { %>
+            
+            <p class="no-results">No results found.</p>
+        <% } %>
+    </div>
+</body>
+</html>

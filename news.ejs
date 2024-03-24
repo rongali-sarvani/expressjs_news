@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website - News</title>
+    <style>
+         
+        
+        *
+        {
+            padding: 0px;
+            margin:0px;
+        }
+        h2
+        {
+            font-size: 30px;
+            color:rgb(5, 8, 79);
+            text-align: center;
+        }
+        hr
+        {
+        
+
+    background-color:rgb(128, 6, 83);
+    height:3px;
+
+        }
+
+    body
+    {
+  
+   /* background-image:url("/images/admin1.jpg");*/
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+     }
+
+        .news-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+}
+
+.news-container {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+/* Custom CSS for news cards */
+.news-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure flex items don't wrap to the next line */
+    overflow-x: hidden; /* Enable horizontal scrolling if content overflows */
+    gap: 10px; /* Adjust spacing between news cards */
+    padding: 10px; /* Add some padding around the news container */
+    scroll-snap-type: x mandatory;
+    width:100%;
+}
+
+
+        .news-card {
+            background-color: #f9f9f9;
+            flex: 0 0 auto;
+            width: 100%;
+            margin-right: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            scroll-snap-align: start; 
+            min-width: 300px; /* Set a minimum width for each news card */
+        }
+
+        a:hover
+{
+    background-color: rgb(18, 18, 95);
+}
+
+
+        .news-image 
+        {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+            margin-left: 500px;
+        }
+
+        .navigation {
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+
+        .nav-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .nav-btn:hover {
+            background-color: #254f0b;
+        }
+
+    .news-title 
+    {
+    
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-content {
+    font-size: 18px;
+}
+
+/* Custom CSS for news cards */
+.news-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure flex items don't wrap to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    gap: 20px; /* Adjust spacing between news cards */
+    padding: 20px; /* Add some padding around the news container */
+    border-radius: 5px;
+}
+
+.news-card {
+    min-width: 300px; /* Set a minimum width for each news card */
+    flex: 0 0 auto; /* Ensure each card maintains its own width */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 50px; /* Add some margin between news cards */
+    
+}
+
+
+
+
+
+
+
+.nav2{
+    
+    background-color: rgba(2, 2, 32, 0.634);
+    padding: 10px 0;
+}
+
+
+.nav2 ul {
+    list-style-type: none;
+    
+}
+
+.nav2 ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.nav2 a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.navtext2
+{
+    color:white;
+    font-size: 20px;
+}
+
+
+.newssec {
+   background-color: rgba(17, 37, 87, 0.212);
+    margin-top: 50px;
+    margin-left:100px;
+    width: 80%; 
+    margin-right:200px;
+    padding-left:50px ; 
+    padding-right: 50px; 
+    border-radius: 5px;
+    /*background-image:url("/images/newsec.jpg"); */
+     
+}
+
+
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    background-color: #09233e;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+.arrow:hover
+{
+    background-color: rgb(0, 128, 0);
+}
+
+.arrow img {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transform: rotate(90deg); /* Rotate the arrow icon */
+}
+/* CSS for search bar and button */
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 8px 20px;
+    margin-left: 10px;
+    background-color: #1c7e167d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="nav2">
+        <ul>
+            <li><a href="/" class="navtext2">Home</a></li>
+            <li><a href="/news" class="navtext2">News</a></li>
+            <% if (user === 'admin') { %>
+                <li><a href="/admin" class="navtext2">Admin</a></li>
+            <% } %>
+            <% if (user) { %>
+                <li><a href="/logout" class="navtext2">Logout</a></li>
+            <% } else { %>
+                <li><a href="/login" class="navtext2">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+
+    <!-- News section -->
+    <section id="news" class="newssec">
+        <h2>Latest News</h2>
+        <hr><br>
+        <!-- Search bar -->
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Search news...">
+            <button type="submit">Search</button>
+        </form>
+        <!-- News cards -->
+        <div class="news-container">
+            <% if (newsList.length > 0) { %>
+                <% for (let i = 0; i < newsList.length; i++) { %>
+                    <!-- News card -->
+                    <div class="news-card">
+                        <h3 class="news-title"><%= newsList[i].title %></h3>
+                        <p class="news-content"><%= newsList[i].content %></p>
+                        <% if (newsList[i].imageUrl) { %>
+                            <img src="<%= newsList[i].imageUrl %>" alt="News Image" class="news-image">
+                        <% } %>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <p>No news available.</p>
+            <% } %>
+        </div>
+        <!-- Navigation arrows -->
+        <div class="navigation">
+            <div class="arrows">
+                <div class="arrow" onclick="prevNews()">❮</div>
+                <div class="arrow" onclick="nextNews()">❯</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for navigation -->
+    <script>
+        let currentIndex = 0;
+
+        function prevNews() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                scrollNews();
+            }
+        }
+
+        function nextNews() {
+            if (currentIndex < document.querySelectorAll('.news-card').length - 1) {
+                currentIndex++;
+                scrollNews();
+            }
+        }
+
+        function scrollNews() {
+            const newsContainer = document.querySelector('.news-container');
+            const newsCards = document.querySelectorAll('.news-card');
+            const scrollAmount = newsCards[currentIndex].offsetLeft - newsContainer.offsetLeft;
+            newsContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

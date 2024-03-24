@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>News Article</title>
+</head>
+
+<body class="t1">
+    <nav class="nav1">
+        <ul>
+            <li><a href="/" class="navtext1">Home</a></li>
+            <li><a href="/news" class="navtext1">News</a></li>
+            <li><a href="/login" class="navtext1">Login</a></li>
+            <li>
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search news...">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="news-article">
+        <h2><%= news.title %></h2>
+        <% if (news.imageUrl) { %>
+        <img src="<%= news.imageUrl %>" alt="News Image">
+        <% } %>
+        <p><%= news.content %></p>
+    </div>
+
+</body>
+
+</html>
