@@ -1,0 +1,419 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    
+}
+*
+{
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    
+}
+
+.background-clip
+{
+    position:fixed;
+    right:0;
+    bottom:0;
+    z-index:-1;
+}
+.t1
+{
+    
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav1{
+   
+    background-color: rgba(2, 2, 32, 0.634);
+    padding: 10px 0;
+}
+.nav2{
+    
+    background-color: rgba(2, 2, 32, 0.634);
+    padding: 10px 0;
+}
+.nav3{
+    
+    background-color: rgba(2, 2, 32, 0.634);
+    padding: 10px 0;
+}
+
+.nav4{
+    
+    background-color: rgba(2, 2, 32, 0.634);
+    padding: 10px 0;
+}
+
+.nav1 ul {
+    list-style-type: none;
+    
+}
+
+.nav1 ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.nav1 a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.nav2 ul {
+    list-style-type: none;
+    
+}
+
+.nav2 ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.nav2 a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.nav3 ul {
+    list-style-type: none;
+    
+}
+
+.nav3 ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.nav3 a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.nav4 ul {
+    list-style-type: none;
+    
+}
+
+.nav4 ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.nav4 a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.navtext1
+{
+    color:white;
+    font-size: 20px;
+}
+.navtext2
+{
+    color:white;
+    font-size: 20px;
+}
+
+.navtext3
+{
+    color:white;
+    font-size: 20px;
+}
+
+
+.navtext4
+{
+    color:white;
+    font-size: 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+   /* background-color: #c4b6e5;*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:#990707;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px;
+    background-color: #83e1a6;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.t2
+{
+  
+   /* background-image:url("/images/admin1.jpg");*/
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.t3
+{
+    /*background-image:url("/images/admin1.jpg");*/
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.t4
+{
+   /* background-image:url("/images/admin1.jpg");*/
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+}
+a:hover
+{
+    background-color: rgb(18, 18, 95);
+}
+
+.loginheading
+{
+    
+    color:#ffffff;
+}
+.loginsection
+{
+   /* background-color:rgb(219, 163, 181);*/
+    margin-left:30% ;
+    margin-top: 10%;
+    height: 300px;
+    width:500px;
+    background-color: rgba(145, 139, 168, 0.566);
+}
+.adminsection
+{
+   background-color:rgba(219, 163, 181, 0.664);
+   /* background: url('/images/newsec.jpg') no-repeat center center fixed;*/
+   margin-left: 10px;
+}
+.adminsection1
+{
+    background-color:rgba(219, 163, 181, 0.664);
+   /* background: url('/images/newsec.jpg') no-repeat center center fixed;*/
+   margin-right: 10px;
+}
+.text
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fbfbfb;
+}
+hr
+{
+    background-color: black;
+    height:3px;
+}
+.exi
+{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.sub
+{
+    background-color: #084e17;
+}
+
+.bor
+{
+    border-color: 1px solid rgb(15, 106, 44);
+}
+
+.head{
+    margin-top: 20%;
+}
+
+
+@media (min-aspect-ratio:14/9)
+{
+    .background-clip
+    {
+        
+        width: 100%;
+        height:auto;
+        
+    }
+}
+.p1
+{
+    margin-top: 50px;
+    text-align: center;
+    font-size: large;
+
+}
+
+.adminsection {
+    margin-top: 20px;
+    color:#ccc;
+    float:left;
+}
+
+.exi {
+    font-size: 24px;
+    color: #f5f0f0;
+}
+
+.adminsection ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.adminsection li {
+    margin-bottom: 20px;
+}
+
+.adminsection img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.adminsection label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.adminsection input[type="text"],
+.adminsection textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.adminsection .sub {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.adminsection .sub:hover {
+    background-color: #0056b3;
+}
+
+
+.adminsection1 {
+    margin-top: 20px;
+    
+    float:right;
+}
+
+
+
+.adminsection1 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.adminsection1 li {
+    margin-bottom: 20px;
+}
+
+.adminsection1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.adminsection1 label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.adminsection1 input[type="text"],
+.adminsection1 textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.adminsection1 .sub {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.adminsection1 .sub:hover {
+    background-color: #0056b3;
+}
+
+
